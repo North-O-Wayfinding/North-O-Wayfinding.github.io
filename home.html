@@ -12,15 +12,26 @@
 
 </head>
 <body>
-	<div class="wrapper">
-		<h1>This is a wayfinding project</h1>
-		<h2>take me to <strong>Food</strong></h2>
-		<h2>take mie to <strong>Fashion</strong></h2>
-		<h2>take me to <strong>Art</strong></h2>
-		<h2>take me to <strong>Music</strong></h2>
-		<h2>take me to <strong>History</strong></h2>
-		<h2>take me to <strong>Everything</strong></h2>
-		<link rel="stylesheet" href="">
+	<div id="map">
+		<div class="wrapper">
+			<h1>This is a wayfinding project</h1>
+			<h2>take me to <strong>Food</strong></h2>
+			<h2>take mie to <strong>Fashion</strong></h2>
+			<h2>take me to <strong>Art</strong></h2>
+			<h2>take me to <strong>Music</strong></h2>
+			<h2>take me to <strong>History</strong></h2>
+			<h2>take me to <strong>Everything</strong></h2>
+			<link rel="stylesheet" href="">
+		</div>
+
+		<script>
+			L.mapbox.accessToken = 'pk.eyJ1Ijoibm9ydGhvd2F5ZmluZGluZyIsImEiOiJja3RpNHlqbDAweW40Mndxam92NzBkZzMwIn0.bwQa9fYpW0huHRIailrWWA';
+			var map = L.mapbox.map('map')
+			    .setView([40, -74.50], 9)
+			    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+			</script>
 	</div>
+
+	<link rel="stylesheet" href="/app.js">
 </body>
 </html>
