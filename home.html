@@ -1,37 +1,34 @@
+
+Mapbox.js
+API
+Examples
+Plugins
+A simple map
+
+Initialize a map in an HTML element with Mapbox.js.
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-
-
-	<script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
-
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
 </head>
 <body>
-	<div id="map">
-		<div class="wrapper">
-			<h1>This is a wayfinding project</h1>
-			<h2>take me to <strong>Food</strong></h2>
-			<h2>take mie to <strong>Fashion</strong></h2>
-			<h2>take me to <strong>Art</strong></h2>
-			<h2>take me to <strong>Music</strong></h2>
-			<h2>take me to <strong>History</strong></h2>
-			<h2>take me to <strong>Everything</strong></h2>
-			<link rel="stylesheet" href="">
-		</div>
 
-		<script>
-			L.mapbox.accessToken = 'pk.eyJ1Ijoibm9ydGhvd2F5ZmluZGluZyIsImEiOiJja3RpNHlqbDAweW40Mndxam92NzBkZzMwIn0.bwQa9fYpW0huHRIailrWWA';
-			var map = L.mapbox.map('map')
-			    .setView([40, -74.50], 9)
-			    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
-			</script>
-	</div>
+<div id='map'></div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoibm9ydGhvd2F5ZmluZGluZyIsImEiOiJja3RpNHlqbDAweW40Mndxam92NzBkZzMwIn0.bwQa9fYpW0huHRIailrWWA';
+var map = L.mapbox.map('map')
+    .setView([40, -74.50], 9)
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+</script>
 
-	<link rel="stylesheet" href="/app.js">
 </body>
 </html>
